@@ -1,307 +1,238 @@
-"use client";
+import React from 'react';
+import { MapPin, Phone, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-
-export default function Page() {
-  const foods = [
-    { title: "Kue Lapis", desc: "Cita rasa manis berlapis tradisi.", img: "/placeholder/tes.jpg" },
-    { title: "Lemper", desc: "Harum daun pisang dan legitnya ketan.", img: "/placeholder/tes.jpg" },
-    { title: "Serabi", desc: "Kelezatan klasik dari tepian Nusantara.", img: "/placeholder/tes.jpg" },
-  ];
-
+export default function RasaNusantaraLanding() {
   return (
-    <main
-      className="w-full min-h-screen flex flex-col items-center justify-start"
-      style={{ backgroundColor: "#fff8ee", fontFamily: "sans-serif" }}
-    >
-      {/* Navbar */}
-      <nav
-        className="fixed top-0 left-0 right-0 flex items-center justify-between shadow-md"
-        style={{
-          backgroundColor: "#4b1d0b",
-          color: "white",
-          height: "60px",
-          padding: "0 100px",
-          zIndex: 50,
-        }}
-      >
-        <h1 style={{ fontWeight: "bold", fontSize: "18px" }}>
-          Eksplorasi Rasa Nusantara
-        </h1>
-        <Button
-          variant="secondary"
-          className="text-[#4b1d0b] font-semibold"
-          style={{ backgroundColor: "white", color: "#4b1d0b", padding: "8px 18px" }}
-        >
-          Jelajahi
-        </Button>
-      </nav>
+    <div className="w-full bg-white font-sans">
+      {/* Header/Navigation */}
+      <header className="bg-amber-900 text-white py-4 px-20" style={{
+        backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,.1) 10px, rgba(0,0,0,.1) 20px)'
+      }}>
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-white rounded"></div>
+            <span className="text-base font-normal">Klik Rasa, Crispi Budaya</span>
+          </div>
+          <nav className="flex gap-12 text-sm">
+            <a href="#" className="hover:text-amber-200">Home</a>
+            <a href="#" className="hover:text-amber-200">Jelajahi</a>
+            <a href="#" className="hover:text-amber-200">Jajanan Tradisional</a>
+            <a href="#" className="hover:text-amber-200">Tentang Kami</a>
+          </nav>
+        </div>
+      </header>
 
       {/* Hero Section */}
-      <section
-        style={{
-          backgroundColor: "#4b1d0b",
-          color: "white",
-          width: "100%",
-          textAlign: "center",
-          paddingTop: "180px",
-          paddingBottom: "120px",
-          marginTop: "60px",
-        }}
-      >
-        <h2 style={{ fontSize: "32px", fontWeight: 600, marginBottom: "20px" }}>
-          Eksplorasi Rasa, Lestarikan Budaya
-        </h2>
-        <div
-          style={{
-            backgroundColor: "white",
-            borderRadius: "50px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            width: "600px",
-            margin: "0 auto",
-            padding: "6px 10px",
-          }}
-        >
-          <Input
-            placeholder="Cari jajanan khas daerah..."
-            className="border-none focus:ring-0"
-            style={{
-              flex: 1,
-              border: "none",
-              outline: "none",
-              color: "#4b1d0b",
-              padding: "8px 14px",
-            }}
-          />
-          <Button
-            style={{
-              backgroundColor: "#4b1d0b",
-              color: "white",
-              borderRadius: "50px",
-              padding: "8px 20px",
-            }}
-          >
-            Cari
-          </Button>
+      <section className="relative bg-amber-900 text-white py-24 px-20" style={{
+        backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,.1) 10px, rgba(0,0,0,.1) 20px)',
+        backgroundColor: '#78350f'
+      }}>
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-serif italic mb-8 leading-tight">
+            Eksplorasi Rasa, Lestarikan Budaya
+          </h1>
+          
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto bg-white rounded-full py-4 px-6 flex items-center gap-3 shadow-lg">
+            <div className="w-6 h-6 bg-gray-300 rounded-full flex-shrink-0"></div>
+            <input 
+              type="text" 
+              placeholder="Cari sesuai yang kamu inginkan mengenai jajanan tradisional..."
+              className="flex-1 outline-none text-gray-600 text-sm"
+            />
+          </div>
+          
+          {/* Interactive Link */}
+          <div className="mt-6">
+            <a href="#" className="text-sm text-white border-b border-white hover:text-amber-200">
+              Lihat Peta Interaktif
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Map Section */}
-      <section
-        style={{
-          backgroundColor: "#fff8ee",
-          width: "100%",
-          textAlign: "center",
-          padding: "60px 0",
-        }}
-      >
-        <h3
-          style={{
-            color: "#4b1d0b",
-            fontWeight: 600,
-            fontSize: "22px",
-            marginBottom: "30px",
-          }}
-        >
+      <section className="py-20 px-20 bg-amber-50">
+        <h2 className="text-3xl font-bold text-center text-amber-900 mb-12">
           Peta Rasa Nusantara
-        </h3>
-        <img
-          src="/placeholder/tes.jpg"
-          alt="Peta Rasa"
-          style={{
-            borderRadius: "12px",
-            boxShadow: "0px 4px 10px rgba(0,0,0,0.15)",
-            width: "800px",
-            height: "400px",
-            objectFit: "cover",
-          }}
-        />
+        </h2>
+        <div className="relative max-w-5xl mx-auto">
+          <div className="w-full h-96 bg-gradient-to-br from-blue-200 to-green-200 rounded-lg shadow-lg relative overflow-hidden">
+            {/* Indonesia Map Placeholder */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-6xl mb-4">🗺️</div>
+                <p className="text-gray-600">Peta Indonesia dengan Pin Lokasi</p>
+              </div>
+            </div>
+            {/* Pin markers */}
+            {[
+              { top: '30%', left: '20%' },
+              { top: '40%', left: '35%' },
+              { top: '50%', left: '50%' },
+              { top: '45%', left: '65%' },
+              { top: '55%', left: '75%' },
+              { top: '35%', left: '80%' }
+            ].map((pos, i) => (
+              <div key={i} className="absolute" style={pos}>
+                <div className="w-8 h-8 bg-red-500 rounded-full border-4 border-white shadow-lg"></div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
-      {/* Explore Section */}
-      <section
-        style={{
-          backgroundColor: "#4b1d0b",
-          color: "white",
-          textAlign: "center",
-          padding: "80px 0",
-          width: "100%",
-        }}
-      >
-        <h3 style={{ fontSize: "22px", fontWeight: 600, marginBottom: "50px" }}>
-          Jelajahi Berdasarkan Rasa
-        </h3>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "30px",
-          }}
-        >
-          {foods.map((f, i) => (
-            <Card
-              key={i}
-              style={{
-                backgroundColor: "#6b2a12",
-                width: "240px",
-                border: "none",
-                overflow: "hidden",
-                color: "white",
-              }}
-            >
-              <img
-                src={f.img}
-                alt={f.title}
-                style={{ width: "100%", height: "140px", objectFit: "cover" }}
-              />
-              <CardContent style={{ padding: "16px" }}>
-                <h4 style={{ fontWeight: "bold", fontSize: "16px" }}>{f.title}</h4>
-                <p style={{ fontSize: "13px", marginTop: "4px" }}>{f.desc}</p>
-              </CardContent>
-            </Card>
+      {/* Product Categories */}
+      <section className="py-20 px-20 bg-white">
+        <h2 className="text-3xl font-bold text-center text-amber-900 mb-12">
+          ✦ Jelajahi Keanekaragaman Rasa ✦
+        </h2>
+        <div className="grid grid-cols-4 gap-8 max-w-6xl mx-auto">
+          {[
+            { title: 'Kue Tradisional', color: 'from-yellow-200 to-yellow-400' },
+            { title: 'Camilan Gurih', color: 'from-green-200 to-green-400' },
+            { title: 'Manisan dan Dodol', color: 'from-pink-200 to-pink-400' },
+            { title: 'Kue Basah', color: 'from-orange-200 to-orange-400' }
+          ].map((cat, i) => (
+            <div key={i} className="text-center">
+              <div className={`w-full h-48 bg-gradient-to-br ${cat.color} rounded-lg shadow-lg mb-4`}></div>
+              <h3 className="font-semibold text-amber-900">{cat.title}</h3>
+              <p className="text-sm text-gray-600 mt-2">Nikmati berbagai pilihan kue tradisional yang lezat</p>
+            </div>
           ))}
         </div>
       </section>
 
-      {/* Featured Section */}
-      <section
-        style={{
-          backgroundColor: "#fff8ee",
-          textAlign: "center",
-          padding: "80px 0",
-          width: "100%",
-        }}
-      >
-        <h3
-          style={{
-            fontSize: "22px",
-            fontWeight: 600,
-            color: "#4b1d0b",
-            marginBottom: "40px",
-          }}
-        >
-          Jajanan Unggulan Hari Ini
-        </h3>
-        <Card
-          style={{
-            backgroundColor: "white",
-            boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
-            width: "600px",
-            margin: "0 auto",
-            border: "none",
-          }}
-        >
-          <img
-            src="/placeholder/tes.jpg"
-            alt="Kue Putu"
-            style={{
-              width: "100%",
-              height: "260px",
-              objectFit: "cover",
-              borderRadius: "8px 8px 0 0",
-            }}
-          />
-          <CardContent style={{ padding: "28px" }}>
-            <h4 style={{ fontWeight: "bold", fontSize: "20px", color: "#4b1d0b" }}>
-              Kue Putu
-            </h4>
-            <p
-              style={{
-                fontSize: "14px",
-                color: "#444",
-                margin: "12px 0 20px",
-              }}
-            >
-              Nikmati aroma pandan dan rasa gula merah dalam setiap gigitan.
+      {/* Special Menu Section */}
+      <section className="py-20 px-20 bg-amber-50">
+        <h2 className="text-3xl font-bold text-center text-amber-900 mb-12">
+          Izinkan Unggulan Hari Ini
+        </h2>
+        <div className="max-w-4xl mx-auto flex gap-12 items-center">
+          <div className="flex-1">
+            <div className="w-full h-80 bg-gradient-to-br from-amber-200 to-amber-400 rounded-lg shadow-xl"></div>
+          </div>
+          <div className="flex-1">
+            <h3 className="text-2xl font-bold text-amber-900 mb-4">Kue Lapis Manado</h3>
+            <p className="text-gray-700 mb-6 leading-relaxed">
+              Kue lapis dengan tekstur lembut dan rasa manis yang pas. Terbuat dari bahan pilihan 
+              berkualitas tinggi dengan resep turun temurun yang autentik. Cocok untuk berbagai 
+              acara spesial Anda.
             </p>
-            <Button
-              style={{
-                backgroundColor: "#4b1d0b",
-                color: "white",
-                borderRadius: "30px",
-                padding: "8px 20px",
-              }}
-            >
-              Lihat Detail
-            </Button>
-          </CardContent>
-        </Card>
+            <button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold">
+              Pesan Sekarang
+            </button>
+          </div>
+        </div>
       </section>
 
-      {/* Community Section */}
-      <section
-        style={{
-          backgroundColor: "#4b1d0b",
-          color: "white",
-          textAlign: "center",
-          padding: "80px 0",
-          width: "100%",
-        }}
-      >
-        <h3 style={{ fontSize: "22px", fontWeight: 600, marginBottom: "40px" }}>
-          Temui Sesama Pecinta Jajanan Nusantara
-        </h3>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "30px",
-          }}
-        >
-          {["Berbagi Resep", "Ulasan Jajanan", "Komunitas Kuliner"].map((item, i) => (
-            <Card
-              key={i}
-              style={{
-                backgroundColor: "#6b2a12",
-                width: "240px",
-                border: "none",
-                color: "white",
-              }}
-            >
-              <CardContent style={{ padding: "40px 20px" }}>
-                <h4 style={{ fontWeight: "bold", fontSize: "16px" }}>{item}</h4>
-                <p style={{ fontSize: "13px", marginTop: "6px" }}>
-                  Bergabung dan nikmati cerita kuliner bersama.
-                </p>
-              </CardContent>
-            </Card>
+      {/* FAQ Section */}
+      {/* <section className="py-20 px-20 bg-amber-900 text-white">
+        <h2 className="text-3xl font-bold text-center mb-12">
+          Temui Santara, Si AI Pecinta Jajanan Nusantara
+        </h2>
+        <div className="max-w-4xl mx-auto grid grid-cols-2 gap-8">
+          <div className="flex items-start gap-4">
+            <div className="w-20 h-20 bg-amber-100 rounded-full flex-shrink-0"></div>
+            <div>
+              <h3 className="font-bold text-xl mb-2">Apa Namamu?</h3>
+              <p className="text-amber-100">
+                Nama saya adalah Namamu, asisten AI yang siap membantu Anda menemukan 
+                kue tradisional favorit!
+              </p>
+            </div>
+          </div>
+          {[
+            { q: 'Apa keahlianmu?', a: 'Saya dapat membantu Anda menemukan resep, informasi nutrisi, dan rekomendasi kue tradisional.' },
+            { q: 'Apa saja?', a: 'Saya mengenal berbagai jenis kue dari Sabang sampai Merauke dengan detail lengkap.' },
+            { q: 'Bagaimana cara memesan?', a: 'Anda dapat memesan melalui website, telepon, atau langsung datang ke toko kami!' }
+          ].map((item, i) => (
+            <div key={i} className="bg-amber-800 rounded-lg p-6">
+              <h3 className="font-bold text-lg mb-2">{item.q}</h3>
+              <p className="text-amber-100 text-sm">{item.a}</p>
+            </div>
           ))}
+        </div>
+      </section> */}
+
+      {/* Testimonial Section */}
+      <section className="py-20 px-20 bg-amber-50">
+        <h2 className="text-3xl font-bold text-center text-amber-900 mb-12">
+          ✦ Kenanga Kita Lesatarikan Rasa Nusantara ✦
+        </h2>
+        <div className="max-w-4xl mx-auto flex gap-12 items-center">
+          <div className="flex-1">
+            <div className="w-64 h-64 bg-amber-900 rounded-full mx-auto flex items-center justify-center">
+              <div className="w-48 h-48 bg-amber-100 rounded-full"></div>
+            </div>
+          </div>
+          <div className="flex-1">
+            <div className="bg-white rounded-lg p-8 shadow-lg">
+              <h3 className="text-xl font-bold text-amber-900 mb-4">
+                Kenapa paden melestarikan tradisional?
+              </h3>
+              <p className="text-gray-700 mb-6">
+                Karena setiap kue menyimpan cerita dan warisan budaya yang perlu dijaga 
+                untuk generasi mendatang. Kelezatan tradisional adalah identitas bangsa.
+              </p>
+              <button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg font-semibold">
+                Pelajari Lebih Lanjut
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer
-        style={{
-          backgroundColor: "#fff8ee",
-          color: "#4b1d0b",
-          textAlign: "center",
-          padding: "60px 0 40px",
-          width: "100%",
-        }}
-      >
-        <h4 style={{ fontWeight: 600, fontSize: "18px", marginBottom: "10px" }}>
-          Bersama Kita Lestarikan Rasa Nusantara
-        </h4>
-        <p
-          style={{
-            fontSize: "14px",
-            maxWidth: "500px",
-            margin: "0 auto 20px",
-          }}
-        >
-          Karena jajanan tradisional bukan sekadar makanan, tetapi warisan budaya yang hidup.
-        </p>
-        <div style={{ display: "flex", justifyContent: "center", gap: "20px", marginBottom: "10px" }}>
-          <a href="#" style={{ textDecoration: "underline" }}>Instagram</a>
-          <a href="#" style={{ textDecoration: "underline" }}>Twitter</a>
-          <a href="#" style={{ textDecoration: "underline" }}>YouTube</a>
+      <footer className="bg-amber-900 text-white py-12 px-20">
+        <div className="grid grid-cols-3 gap-12 mb-8">
+          <div>
+            <h4 className="font-bold text-lg mb-4">Rasa Nusantara</h4>
+            <p className="text-amber-100 text-sm">
+              Melestarikan cita rasa tradisional Indonesia dengan kualitas terbaik
+            </p>
+          </div>
+          <div>
+            <h4 className="font-bold text-lg mb-4">Navigasi</h4>
+            <ul className="space-y-2 text-sm text-amber-100">
+              <li><a href="#" className="hover:text-white">Beranda</a></li>
+              <li><a href="#" className="hover:text-white">Tentang Kami</a></li>
+              <li><a href="#" className="hover:text-white">Produk</a></li>
+              <li><a href="#" className="hover:text-white">Kontak</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-bold text-lg mb-4">Kontak</h4>
+            <div className="space-y-3 text-sm text-amber-100">
+              <div className="flex items-center gap-2">
+                <MapPin size={16} />
+                <span>Jakarta, Indonesia</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone size={16} />
+                <span>+62 812-3456-7890</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail size={16} />
+                <span>info@rasanusantara.com</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <p style={{ fontSize: "12px", opacity: 0.7 }}>© 2025 Rasa Nusantara</p>
+        <div className="border-t border-amber-800 pt-8 flex justify-between items-center">
+          <p className="text-sm text-amber-100">© 2024 Rasa Nusantara. All rights reserved.</p>
+          <div className="flex gap-4">
+            <Facebook size={20} className="cursor-pointer hover:text-amber-200" />
+            <Instagram size={20} className="cursor-pointer hover:text-amber-200" />
+            <Twitter size={20} className="cursor-pointer hover:text-amber-200" />
+          </div>
+        </div>
       </footer>
-    </main>
+
+      {/* WhatsApp Float Button */}
+      <div className="fixed bottom-8 right-8 w-16 h-16 bg-green-500 rounded-full shadow-lg flex items-center justify-center cursor-pointer hover:bg-green-600">
+        <Phone className="text-white" size={28} />
+      </div>
+    </div>
   );
 }
