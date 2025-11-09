@@ -211,7 +211,7 @@ export default function JajananTradisionalPage() {
         </div>
         <div className="border-t border-amber-800 pt-6 text-center">
           <p className="text-sm text-amber-100">
-            Hak Cipta © 2025, Made with love by ❤️ NFSH
+            Hak Cipta © 2025
           </p>
         </div>
       </footer>
