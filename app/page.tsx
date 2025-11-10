@@ -10,6 +10,8 @@ import {
 import Hero from "@/components/landing/hero";
 import Navbar from "@/components/ui/navbar";
 import Title from "@/components/landing/title";
+import Map from "@/components/landing/map";
+import Image from "next/image";
 
 export default function RasaNusantaraLanding() {
   return (
@@ -21,34 +23,9 @@ export default function RasaNusantaraLanding() {
     >
       <Hero />
       {/* Map Section */}
-      <section className=" bg-amber-50 py-8 ">
+      <section className="flex bg-amber-50 py-8 gap-12 flex-col justify-center">
         <Title isBrown={true}>Peta Rasa Nusantara</Title>
-        <div className="relative max-w-5xl mx-auto">
-          <div className="w-full h-96 bg-linear-to-br from-blue-200 to-green-200 rounded-lg shadow-lg relative overflow-hidden">
-            {/* Indonesia Map Placeholder */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl mb-4">🗺️</div>
-                <p className="text-gray-600">
-                  Peta Indonesia dengan Pin Lokasi
-                </p>
-              </div>
-            </div>
-            {/* Pin markers */}
-            {[
-              { top: "30%", left: "20%" },
-              { top: "40%", left: "35%" },
-              { top: "50%", left: "50%" },
-              { top: "45%", left: "65%" },
-              { top: "55%", left: "75%" },
-              { top: "35%", left: "80%" },
-            ].map((pos, i) => (
-              <div key={i} className="absolute" style={pos}>
-                <div className="w-8 h-8 bg-red-500 rounded-full border-4 border-white shadow-lg"></div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Map />
       </section>
 
       {/* Product Categories */}
@@ -134,30 +111,37 @@ export default function RasaNusantaraLanding() {
       </section> */}
 
       {/* Testimonial Section */}
-      <section className="py-20 px-20 bg-amber-50">
-        <h2 className="text-3xl font-bold text-center text-amber-900 mb-12">
-          ✦ Kenanga Kita Lesatarikan Rasa Nusantara ✦
-        </h2>
-        <div className="max-w-4xl mx-auto flex gap-12 items-center">
-          <div className="flex-1">
-            <div className="w-64 h-64 bg-amber-900 rounded-full mx-auto flex items-center justify-center">
-              <div className="w-48 h-48 bg-amber-100 rounded-full"></div>
-            </div>
-          </div>
-          <div className="flex-1">
-            <div className="bg-white rounded-lg p-8 shadow-lg">
-              <h3 className="text-xl font-bold text-amber-900 mb-4">
-                Kenapa paden melestarikan tradisional?
+      <section className="flex gap-17 flex-col pt-11 pb-32 bg-(--Color-Scheme-1-Background)">
+        <Title isBrown={true}>Bersama Kita Lestarikan Rasa Nusantara</Title>
+        <div className="max-w-5xl mx-auto flex gap-21 items-center justify-center">
+          <Image
+            src={"/assets/mascot-smile.png"}
+            alt="mascot smile"
+            width={350}
+            height={350}
+            className="bg-(--Color-Primary-300) rounded-full"
+          />
+
+          <div className="relative flex-1">
+            <div className="text-(--Color-Primary-500)">
+              <h3 className="font-cormorant font-semibold mb-4 text-4xl">
+                Kamu jualan jajanan tradisional?
               </h3>
-              <p className="text-gray-700 mb-6">
-                Karena setiap kue menyimpan cerita dan warisan budaya yang perlu
-                dijaga untuk generasi mendatang. Kelezatan tradisional adalah
-                identitas bangsa.
+              <p className="mb-6 font-medium text-xl">
+                Yuk, tampilkan jualanmu di Klik Rasa, Cicip Budaya supaya lebih
+                banyak yang tahu dan jatuh cinta sama jajanan kulinermu.
               </p>
-              <button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg font-semibold">
-                Pelajari Lebih Lanjut
+              <button className="bg-(--Color-Primary-500) hover:bg-(--Color-Primary-500)/80 text-white px-22 py-2 font-semibold rounded-3xl cursor-pointer">
+                Daftarkan Produkmu
               </button>
             </div>
+            <Image
+              src={"/assets/batik-leaf.svg"}
+              alt="batik leaf"
+              height={182}
+              width={182}
+              className="absolute -right-30 top-30 rotate-3"
+            />
           </div>
         </div>
       </section>
