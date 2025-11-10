@@ -9,16 +9,20 @@ import {
 } from "lucide-react";
 import Hero from "@/components/landing/hero";
 import Navbar from "@/components/ui/navbar";
+import Title from "@/components/landing/title";
 
 export default function RasaNusantaraLanding() {
   return (
-    <div className="relative w-full bg-white font-sans">
+    <div
+      className="relative w-full bg-[#FCF2DF] font-sans"
+      style={{
+        background: "var(--Color-Scheme-1-Background, #FCF2DF)",
+      }}
+    >
       <Hero />
       {/* Map Section */}
-      <section className="py-20 px-20 bg-amber-50">
-        <h2 className="text-3xl font-bold text-center text-amber-900 mb-12">
-          Peta Rasa Nusantara
-        </h2>
+      <section className=" bg-amber-50 py-8 ">
+        <Title isBrown={true}>Peta Rasa Nusantara</Title>
         <div className="relative max-w-5xl mx-auto">
           <div className="w-full h-96 bg-linear-to-br from-blue-200 to-green-200 rounded-lg shadow-lg relative overflow-hidden">
             {/* Indonesia Map Placeholder */}

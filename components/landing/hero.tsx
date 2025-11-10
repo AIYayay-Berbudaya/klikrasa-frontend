@@ -86,6 +86,7 @@ const Hero = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
+      id="hero-section"
     >
       {/* TOP ROW */}
       <div className="absolute top-0 w-full overflow-hidden py-4">
