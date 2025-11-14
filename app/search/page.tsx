@@ -37,7 +37,6 @@ export default function JajananTradisionalPage() {
     { name: 'Kue Putu Mayang', location: 'Kota Bekasi, DKI Jakarta', price: '0.0', rating: 4.5 },
   ];
 
-  // Combine all products and filter based on search query
   const allProducts = [
     ...section1Products,
     ...section2Products,
@@ -54,7 +53,6 @@ export default function JajananTradisionalPage() {
 
   return (
     <div className="w-full bg-white font-sans">
-      {/* Hero Section */}
       <section 
         className="relative bg-amber-900 text-white py-16 px-20" 
         style={{
@@ -69,7 +67,6 @@ export default function JajananTradisionalPage() {
             Eksplorasi Jajanan Tradisional
           </h1>
           
-          {/* Search Bar */}
           <div className="max-w-2xl mx-auto bg-white rounded-full py-4 px-6 flex items-center gap-3 shadow-lg">
             <div className="w-6 h-6 bg-gray-300 rounded-full flex-shrink-0"></div>
             <input 
@@ -91,10 +88,8 @@ export default function JajananTradisionalPage() {
         </div>
       </section>
 
-      {/* Content Section */}
       <div className="bg-amber-50 py-12 px-20 min-h-screen">
         {searchQuery ? (
-          /* Search Results */
           <div className="mb-16">
             <div className="mb-8">
               <h2 className="text-2xl text-amber-900 font-serif mb-2">
@@ -140,9 +135,7 @@ export default function JajananTradisionalPage() {
             )}
           </div>
         ) : (
-          /* Default Sections */
           <>
-        {/* Section 1 */}
         <div className="mb-16">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-2xl text-amber-900 font-serif">
@@ -175,7 +168,6 @@ export default function JajananTradisionalPage() {
           </div>
         </div>
 
-        {/* Section 2 */}
         <div className="mb-16">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-2xl text-amber-900 font-serif">
@@ -208,7 +200,6 @@ export default function JajananTradisionalPage() {
           </div>
         </div>
 
-        {/* Section 3 */}
         <div className="mb-16">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-2xl text-amber-900 font-serif">
@@ -241,7 +232,6 @@ export default function JajananTradisionalPage() {
           </div>
         </div>
 
-        {/* Section 4 */}
         <div className="mb-16">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-2xl text-amber-900 font-serif">
