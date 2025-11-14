@@ -11,7 +11,6 @@ export default function DetailJajananPage() {
   return (
     <div className="w-full bg-[#f7f2e8] font-sans">
 
-      {/* HEADER */}
       <section
         className="relative bg-amber-900 text-white py-16 px-20"
         style={{
@@ -38,15 +37,12 @@ export default function DetailJajananPage() {
         </div>
       </section>
 
-      {/* MAIN SECTION */}
       <div className="py-16 px-20">
 
-        {/* TITLE */}
         <h2 className="text-center text-4xl font-serif text-amber-900 font-semibold mb-8">
           Kue Putu Mayang
         </h2>
 
-        {/* MAIN IMAGE */}
         <div className="w-full flex justify-center mb-8">
           <img
             src="/placeholder/main-image.jpg"
@@ -55,14 +51,12 @@ export default function DetailJajananPage() {
           />
         </div>
 
-        {/* GALLERY */}
         <div className="flex justify-center gap-4 mb-16">
           <img src="/placeholder/thumb1.jpg" className="w-24 h-24 rounded-full object-cover border-2 border-amber-800" />
           <img src="/placeholder/thumb2.jpg" className="w-24 h-24 rounded-full object-cover border-2 border-amber-800" />
           <img src="/placeholder/thumb3.jpg" className="w-24 h-24 rounded-full object-cover border-2 border-amber-800" />
         </div>
 
-        {/* TAB BUTTONS */}
         <div className="flex justify-center gap-10 text-amber-900 mb-12">
           <button
             onClick={() => setActiveTab("cerita")}
@@ -87,10 +81,8 @@ export default function DetailJajananPage() {
           </button>
         </div>
 
-        {/* CONTENT - SWITCH BASED ON TAB */}
         {activeTab === "cerita" ? (
           <>
-            {/* CERITA CONTENT */}
             <div className="grid grid-cols-3 gap-8">
               <div className="col-span-2 text-amber-900 leading-relaxed text-[15px]">
                 <h3 className="font-serif text-2xl font-semibold mb-6">
@@ -111,7 +103,6 @@ export default function DetailJajananPage() {
                 </p>
               </div>
 
-              {/* SIDEBAR */}
               <div className="flex flex-col gap-6">
                 <div className="bg-white shadow-md rounded-lg p-4">
                   <img
@@ -138,10 +129,8 @@ export default function DetailJajananPage() {
           </>
         ) : (
           <>
-            {/* RESEP CONTENT */}
             <div className="grid grid-cols-2 gap-8 mt-10">
 
-              {/* Bahan - Bahan */}
               <div className="border border-amber-300 bg-white p-6 rounded-lg">
                 <h3 className="text-xl font-serif font-semibold text-amber-900 mb-4">
                   Bahan - Bahan
@@ -162,7 +151,6 @@ export default function DetailJajananPage() {
                 </div>
               </div>
 
-              {/* Cara Membuat */}
               <div className="border border-amber-300 bg-white p-6 rounded-lg">
                 <h3 className="text-xl font-serif font-semibold text-amber-900 mb-4">
                   Cara Membuat
@@ -188,7 +176,6 @@ export default function DetailJajananPage() {
           </>
         )}
 
-        {/* UMKM SECTION */}
         <div className="mt-20">
           <h3 className="text-2xl font-serif text-amber-900 mb-8">
             Dukang UMKM yang Memasarkan Rasa
@@ -230,7 +217,6 @@ export default function DetailJajananPage() {
           </div>
         </div>
 
-        {/* CTA */}
         <div className="mt-20 bg-[#f6e4b8] border border-amber-300 rounded-lg p-12 text-center">
           <h3 className="text-3xl font-serif text-amber-900 mb-4">
             Ayo, Tampilkan Cita Rasa Khas Daerahmu!
