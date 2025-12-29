@@ -64,6 +64,7 @@ const Hero = () => {
   }, [scrollSpeed, topX, bottomX]);
 
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let isScrolling: any;
     const handleScroll = () => {
       setScrollSpeed(10);
@@ -79,7 +80,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative bg-amber-900 text-white px-20 min-h-[843px] flex flex-col items-center justify-center overflow-hidden"
+      className="relative bg-amber-900 text-white px-20 min-h-screen flex flex-col items-center justify-center overflow-hidden"
       style={{
         backgroundImage: "url('/assets/batik-bg.png')",
         backgroundColor: "#78350f",

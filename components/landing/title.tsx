@@ -6,7 +6,7 @@ interface TitleProps {
 
 const Title = ({ children, isBrown = false }: TitleProps) => {
   return (
-    <div className="flex items-center justify-center gap-4">
+    <div className="flex items-center justify-center gap-4 relative z-10">
       {/* Kiri */}
       <div className="relative flex items-center w-full">
         <span
