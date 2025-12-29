@@ -138,6 +138,7 @@ export default function RasaNusantaraLanding() {
               alt="mascot smile"
               width={300}
               height={300}
+              className="mr-8"
             />
           </div>
 

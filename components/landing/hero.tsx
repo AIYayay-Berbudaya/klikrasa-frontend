@@ -149,7 +149,15 @@ const Hero = () => {
           Eksplorasi Rasa, Lestarikan Budaya
         </h1>
         <div className="max-w-2xl mx-auto bg-white rounded-full py-4 px-6 flex items-center gap-3 shadow-lg">
-          <div className="w-6 h-6 bg-gray-300 rounded-full shrink-0"></div>
+          <div className="w-8 h-8 rounded-full shrink-0 pt-1">
+            <Image
+              src="/assets/chatbot-float.svg"
+              className=""
+              width={50}
+              height={50}
+              alt="chatbot-float"
+            />
+          </div>
           <input
             type="text"
             placeholder="Cari sesuai yang kamu inginkan mengenai jajanan tradisional..."

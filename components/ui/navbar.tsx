@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <nav
       className={`w-[80%] fixed top-10 left-1/2 -translate-x-1/2 z-50 bg-[#2F130E]/80 ${
-        isHeroVisible ? "opacity-100" : "opacity-20"
+        isHeroVisible ? "opacity-100" : "opacity-5"
       } hover:opacity-100 text-white py-4 px-12 rounded-4xl shadow-lg flex justify-between items-center backdrop-blur-xl hover:backdrop-blur-md transition-all duration-300`}
     >
       <div className="flex items-center gap-3">
