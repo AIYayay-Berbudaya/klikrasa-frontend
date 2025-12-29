@@ -21,7 +21,10 @@ export default function RasaNusantaraLanding() {
     >
       <Hero />
       {/* Map Section */}
-      <section className="flex bg-[#FCF2DF] pb-8 gap-12 flex-col justify-center min-h-screen">
+      <section
+        className="flex bg-[#FCF2DF] pb-8 gap-12 flex-col justify-center min-h-screen"
+        id="peta-rasa"
+      >
         <Title isBrown={true}>Peta Rasa Nusantara</Title>
         <Map />
       </section>

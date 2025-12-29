@@ -2,8 +2,13 @@ import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-// Data marker
-const markers = [
+interface MarkerData {
+  position: [number, number];
+  icon: string;
+  label: string;
+}
+
+const markers: MarkerData[] = [
   {
     position: [-6.2, 106.8],
     icon: "/assets/jajanan-map/Ellipse_1.png",
@@ -26,12 +31,12 @@ const markers = [
 function createDivIcon(iconUrl: string, label: string) {
   return L.divIcon({
     html: `
-      <div style="display: flex; flex-direction: column; align-items: center;">
+      <a style="display: flex; flex-direction: column; align-items: center;" href="/detail">
         <img src="${iconUrl}" style="width:40px;height:40px;border:2px solid #A65B2E;border-radius:50%;" />
         <span style="background: #A65B2E; color: white; font-size: 13px; border-radius: 20px; padding: 2px 8px; margin-top: 4px; font-family: inherit; white-space: nowrap;">
           ${label}
         </span>
-      </div>
+      </a>
     `,
     className: "",
     iconSize: [40, 60],

@@ -36,7 +36,7 @@ const Navbar = () => {
         <Link href="/" className="hover:text-amber-200">
           Home
         </Link>
-        <Link href="#peta-rasa" className="hover:text-amber-200">
+        <Link href="/#peta-rasa" className="hover:text-amber-200">
           Jelajahi
         </Link>
         <Link href="/explore" className="hover:text-amber-200">

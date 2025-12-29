@@ -9,11 +9,11 @@ import ProductCard from "@/components/detail/ProductCard";
 export default function DetailJajananPage() {
   const [activeTab, setActiveTab] = useState<"cerita" | "resep">("cerita");
   const [kueData, setKueData] = useState({
-    title: "Kue Putu Mayang",
+    name: "Kue Putu Mayang",
     thumbnail: ["1", "2", "3"],
     shop: [
       {
-        title: "Kue Putu Mayang Enaknyo",
+        name: "Kue Putu Mayang Enaknyo",
         img: "/assets/jajanan/jajan2.png",
         rating: "4.9",
         shop: "Toko Mawar Senja",
@@ -21,7 +21,7 @@ export default function DetailJajananPage() {
         link: "#",
       },
       {
-        title: "Kue Putu Mayang Barokah",
+        name: "Kue Putu Mayang Barokah",
         img: "/assets/jajanan/jajan2.png",
         rating: "4.9",
         shop: "Toko Lestari Rasa",
@@ -29,7 +29,7 @@ export default function DetailJajananPage() {
         link: "#",
       },
       {
-        title: "Kue Putu Mayang Jaya",
+        name: "Kue Putu Mayang Jaya",
         img: "/assets/jajanan/jajan2.png",
         rating: "4.9",
         shop: "Toko Kue Nyiur Manis",
@@ -274,7 +274,7 @@ export default function DetailJajananPage() {
             {kueData.shop.map((item, index) => (
               <ProductCard
                 key={index}
-                title={item.title}
+                title={item.name}
                 img={item.img}
                 rating={item.rating}
                 shop={item.shop}
